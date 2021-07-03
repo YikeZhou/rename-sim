@@ -1,6 +1,8 @@
 package object renamesim {
-  def archRegNum = 4
-  def robSize = 5
+  val archRegNum = 4
+  val robSize = 5
+
+  val universalPrfSize = 10
 
   object OpCode extends Enumeration {
     val Add, Sub = Value
