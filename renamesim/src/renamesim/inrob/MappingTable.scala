@@ -1,4 +1,6 @@
-package renamesim
+package renamesim.inrob
+
+import renamesim.archRegNum
 
 class MappingTable {
   val tbl: Array[Option[Int]] = Array.fill(archRegNum)(None: Option[Int])

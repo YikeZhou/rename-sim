@@ -1,4 +1,6 @@
-package renamesim
+package renamesim.inrob
+
+import renamesim.{OpCode, robSize}
 
 class Rob {
   private val rob = Array.fill(robSize)(RobEntry(valid = false, None, -1, None, -1, None, -1, OpCode.Add))

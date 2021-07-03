@@ -1,7 +1,8 @@
-package renamesim
+package renamesim.inrob
 
 import org.scalatest.flatspec.AnyFlatSpec
 import renamesim.instgen.InstructionGenerator
+import renamesim.{Instruction, Ref, robSize}
 
 import scala.io.StdIn.readLine
 

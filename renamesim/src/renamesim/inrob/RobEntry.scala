@@ -1,4 +1,6 @@
-package renamesim
+package renamesim.inrob
+
+import renamesim.OpCode
 
 case class RobEntry(
                      var valid: Boolean,

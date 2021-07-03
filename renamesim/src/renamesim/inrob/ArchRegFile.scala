@@ -1,7 +1,9 @@
-package renamesim
+package renamesim.inrob
 
+import renamesim.archRegNum
+
+import java.lang.Math.floorMod
 import scala.util.Random
-import Math.floorMod
 
 class ArchRegFile {
   /* Initialize with random digit (easy to track value change) */

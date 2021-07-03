@@ -1,4 +1,6 @@
-package renamesim
+package renamesim.inrob
+
+import renamesim.{Instruction, OpCode}
 
 /**
  * Containing ROB, ARF and Mapping Table
