@@ -5,7 +5,7 @@ import Math.floorMod
 
 class ArchRegFile {
   /* Initialize with random digit (easy to track value change) */
-  private val rf = Array.fill(archRegNum)(floorMod(Random.nextInt(), 10))
+  val rf: Array[Int] = Array.fill(archRegNum)(floorMod(Random.nextInt(), 10))
 
   def read(idx: Int): Int = {
     require(idx < archRegNum)

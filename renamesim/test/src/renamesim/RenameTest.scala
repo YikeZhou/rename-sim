@@ -21,6 +21,7 @@ class RenameTest extends AnyFlatSpec {
     /* TODO add checker in arf when deq */
     val testSize = 10 /* test 10 instructions */
     val dut = new Dut
+    val ref = new Ref(dut.arf.rf)
     val gen = new InstructionGenerator(testSize)
 
     /* 1. fill rob */
@@ -33,6 +34,7 @@ class RenameTest extends AnyFlatSpec {
     /* 2. pop 1 inst then push 1 */
     while (gen.hasNext) {
       dut.deq()
+      ref.exec(gen.lastInst.get, dut.arf)
       debugInfo(dut, gen.lastInst.get, isDeq = true)
       dut.enq(gen.next())
       debugInfo(dut, gen.lastInst.get, isDeq = false)
@@ -41,6 +43,7 @@ class RenameTest extends AnyFlatSpec {
     /* 3. clear rob */
     for (_ <- 0 until robSize) {
       dut.deq()
+      ref.exec(gen.lastInst.get, dut.arf)
       debugInfo(dut, gen.lastInst.get, isDeq = true)
     }
   }
